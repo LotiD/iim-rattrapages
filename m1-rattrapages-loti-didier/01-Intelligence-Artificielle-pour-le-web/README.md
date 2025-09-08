@@ -2,6 +2,10 @@
 
 Ce projet est une application web qui utilise l'API OpenAI pour générer des horoscopes basés sur la date de naissance et un thème donné. L'application est construite avec Node.js et Express pour le backend, et utilise des technologies web standards pour le frontend.
 
+
+## Démonstration
+https://youtu.be/zDBcbEUF3CI
+
 ## Structure du Projet
 
 - **api/** : Contient le serveur backend écrit en Node.js avec Express.
