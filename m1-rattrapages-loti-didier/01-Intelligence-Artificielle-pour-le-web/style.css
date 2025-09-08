@@ -163,3 +163,63 @@ footer {
     font-size: 0.9rem;
     color: #777;
 }
+
+
+/* ===== Responsiveness ===== */
+@media (max-width: 768px) {
+    .main_card {
+        padding: 1.5rem;
+        margin: 1rem;
+        max-width: 90%;
+    }
+
+    .main_card h1 {
+        font-size: 1.5rem;
+    }
+
+    .horoscope_form input,
+    .horoscope_form select,
+    .horoscope_form button {
+        font-size: 0.9rem;
+    }
+
+    .result_horoscope {
+        max-width: 90%;
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .result_horoscope img {
+        max-width: 90%;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main_card {
+        padding: 1rem;
+        margin: 2rem;
+        max-width: 90%;
+    }
+
+    .main_card h1 {
+        font-size: 1.3rem;
+    }
+
+    .horoscope_form input,
+    .horoscope_form select,
+    .horoscope_form button {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.7rem;
+    }
+
+    .result_horoscope {
+        font-size: 0.95rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .result_horoscope img {
+        max-width: 100%;
+        padding: 12px;
+    }
+}
