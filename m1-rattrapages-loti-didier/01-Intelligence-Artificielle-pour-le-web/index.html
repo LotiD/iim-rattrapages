@@ -15,8 +15,19 @@
         <div class="main_card">
             <h1>Votre horoscope du jour en une phrase</h1>
             <form id="horoscope-form" class="horoscope_form">
+
                 <label for="birthday" > Date de naissance :</label>
                 <input type="date" id="birthday" required>
+                
+                <label for="theme">Choisir un thème :</label>
+                <select id="theme" required>
+                  <option value="amour">Amour</option>
+                  <option value="argent">Argent</option>
+                  <option value="travail">Travail</option>
+                  <option value="relations">Relations</option>
+                  <option value="santé">Santé</option>
+                </select>
+
                 <button type="submit">Avoir mon horoscope</button>
             </form>
         </div>

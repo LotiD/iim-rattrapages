@@ -5,6 +5,9 @@ const apiKey = "ma clé api";
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const birthday =document.getElementById("birthday").value;
+    const theme = document.getElementById("theme").value;
+
+    resultHoroscope.textContent = "Consultation des astres...";
 
     try {
         const response = await fetch("http://localhost:3000/api/horoscope", {
@@ -12,7 +15,7 @@ form.addEventListener("submit", async (e) => {
             headers: {
               "Content-Type": "application/json"
             },
-            body: JSON.stringify({ birthday })
+            body: JSON.stringify({ birthday, theme })
           });
       
           const data = await response.json();
