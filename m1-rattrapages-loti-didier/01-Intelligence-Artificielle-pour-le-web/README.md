@@ -74,6 +74,9 @@ Le serveur sera accessible à l'adresse `http://localhost:3000`.
 - **cors** : Middleware pour activer CORS.
 - **node-fetch** : Module pour effectuer des requêtes HTTP.
 - **openai** : Client officiel pour l'API OpenAI.
+- **path** : Module pour manipuler les chemins de fichiers et de répertoires.
+- **url** : Module pour l'analyse et la manipulation des URL.
+
 
 ## Remarques
 
