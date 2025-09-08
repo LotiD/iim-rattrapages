@@ -8,12 +8,11 @@ body {
     padding: 0;
     margin: 0;
 }
-      
-
-
+    
 main {
     display: flex;
     flex-direction: column;
+    width: 100%;
     align-items: center;
     justify-content: center;
     flex: 1;
@@ -23,6 +22,7 @@ main {
     background-repeat: no-repeat;
 }
 
+/* ===== Form ===== */
 .main_card {
     background: #fff;
     padding: 2rem;
@@ -31,6 +31,14 @@ main {
     max-width: 400px;
     width: 100%;
     text-align: center;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.main_card.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    display: none;
+    pointer-events: none;
 }
 
 .main_card h1 {
@@ -40,7 +48,7 @@ main {
     color: #4a148c; 
 }
 
-/* ===== Form ===== */
+
 .horoscope_form {
     display: flex;
     flex-direction: column;
@@ -91,19 +99,59 @@ main {
     color: #4a148c;
     padding: 1rem 1.5rem;
     border-radius: 12px;
-    max-width: 400px;
+    max-width: 600px;
     width: 100%;
     text-align: center;
     font-weight: 500;
     font-size: 1.1rem;
     display: none;
     opacity: 0;
+    transform: translateY(20px);
     transition: opacity 0.5s ease-in-out;
 }
 
-.result_horoscope.show {
-    display: block;
+.result_horoscope.show { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     opacity: 1;
+    transform: translateY(0);
+}
+
+.result_horoscope img {
+    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+    max-width: 500px ;
+    padding: 24px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border-radius: 12px;
+}
+
+.result_horoscope img.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-back {
+    margin-top: 1.5rem;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    color: #4a148c;
+    font-size: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: transparent;
+    font-family: 'Story Script', cursive;
+}
+
+.btn-back:hover {
+    cursor: pointer;
 }
 
 /* ===== Footer ===== */
