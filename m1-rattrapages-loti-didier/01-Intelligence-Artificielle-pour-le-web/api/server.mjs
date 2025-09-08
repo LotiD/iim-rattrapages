@@ -7,7 +7,6 @@ dotenv.config();
 
 if (!process.env.OPENAI_API_KEY) {
     console.error("Clé API OpenAI manquante !");
-    process.exit(1); // stoppe le serveur si clé absente
 }
 
 const openai = new OpenAI({

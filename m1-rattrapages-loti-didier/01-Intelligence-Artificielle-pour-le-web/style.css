@@ -1,22 +1,117 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color:rgb(236, 92, 147);
+    justify-content: space-between;
+    min-height: 100vh;
     font-family: "Story Script", sans-serif;
     font-weight: 400;
-    font-style: normal;
-    
-      
+    padding: 0;
+    margin: 0;
 }
+      
+
 
 main {
-    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background-image: url(./assets/images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .main_card {
-    background-color: #ffffff;
-    padding: 64px;
-    border-radius: 24px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
 }
 
+.main_card h1 {
+    font-family: 'Story Script', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #4a148c; 
+}
+
+/* ===== Form ===== */
+.horoscope_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.horoscope_form label {
+    font-weight: 500;
+    text-align: left;
+}
+
+.horoscope_form input,
+.horoscope_form select {
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.horoscope_form input:focus,
+.horoscope_form select:focus {
+    border-color: #4a148c;
+}
+
+/* ===== Button ===== */
+.horoscope_form button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    background: #4a148c;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Story Script', cursive;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.horoscope_form button:hover {
+    background: #6a1b9a;
+}
+
+/* ===== Result ===== */
+.result_horoscope {
+    margin-top: 2rem;
+    background: #e1bee7;
+    color: #4a148c;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.result_horoscope.show {
+    display: block;
+    opacity: 1;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #777;
+}
