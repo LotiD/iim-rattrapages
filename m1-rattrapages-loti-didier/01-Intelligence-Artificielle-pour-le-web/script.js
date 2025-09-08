@@ -7,31 +7,16 @@ form.addEventListener("submit", async (e) => {
     const birthday =document.getElementById("birthday").value;
 
     try {
-        const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        const response = await fetch("http://localhost:3000/api/horoscope", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer " + apiKey
+              "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-                model: "gpt-4o-mini",
-                messages: [
-                    {
-                        role: "developer",
-                        content: "Tu es un expert en astrologie et tu dois me donner un horoscope en une phrase seulement et rien d'autre"
-                    },
-                    {
-                        role: "user",
-                        content: "Je suis né le " + birthday
-                    }
-                ],
-                max_tokens:50,
-            }),
-        });
-
-        const data = await response.json();
-        const receivedHoroscope = data.choices[0].message.content;
-        resultHoroscope.textContent = receivedHoroscope;
+            body: JSON.stringify({ birthday })
+          });
+      
+          const data = await response.json();
+          resultHoroscope.textContent = data.horoscope;
     
     }catch (error) {
         console.error("Erreur lors de la récupération de l'horoscope:", error);

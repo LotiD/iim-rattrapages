@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
     <script src="./script.js" defer></script>
-    <title>Document</title>
+    <title>Horoscope en une phrase</title>
 </head>
 <body>
     <main>
-        <h1>Votre horoscope du jour en une phrase</h1>
-        <form id="horoscope-form">
-            <label for="birthday" > Date de naissance :</label>
-            <input type="date" id="birthday" required>
-            <button type="submit">Avoir mon horoscope</button>
-        </form>
-        <div class="result-horoscope" id="result-horoscope"></div>
+        <div class="main_card">
+            <h1>Votre horoscope du jour en une phrase</h1>
+            <form id="horoscope-form" class="horoscope_form">
+                <label for="birthday" > Date de naissance :</label>
+                <input type="date" id="birthday" required>
+                <button type="submit">Avoir mon horoscope</button>
+            </form>
+        </div>
+        <div class="result_horoscope" id="result-horoscope"></div>
     </main>
+    <footer>
+        LOTI Didier - 2025
+    </footer>
 </body>
 </html>
